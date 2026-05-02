@@ -29,11 +29,32 @@ npm link
 
 ## Quick Start
 
-### Step 1: Set Up Request Interceptor in Your Express Server
-
+### Step 1: Set Up Request Interceptor in Your Express Server 
+1. `Module Type`
 ```javascript
 import express from 'express';
 import { requestInterceptor } from 'postman-simplified';
+
+const app = express();
+
+// Add the request interceptor middleware
+app.use(express.json());
+app.use(requestInterceptor());
+
+// Your routes here
+app.get('/api/users', (req, res) => {
+  res.json({ users: [] });
+});
+
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
+});
+```
+
+2. `CommonJS`
+```javascript
+const express = require('express');
+const { requestInterceptor } = require('postman-simplified');
 
 const app = express();
 
@@ -56,6 +77,8 @@ app.listen(3000, () => {
 Make requests to your API using any HTTP client:
 
 ```bash
+npm run dev
+#or
 npm run start
 ```
 

@@ -1,11 +1,12 @@
 {
   "name": "postman-simplified",
-  "version": "1.0.2",
-  "description": "A simple CLI tool with a request interceptor and a postman mapper to convert your requests to a managed postman collection to be imported in postman",
-  "license": "ISC",
+  "version": "1.0.3",
+  "description": "A simple CLI tool with a request interceptor and a postman mapper to convert your requests to a managed postman collection ready to be imported directly in postman",
+  "license": "MIT",
   "author": "Pranava Pai N",
   "type": "module",
   "main": "index.js",
+  "keywords": ["postman","developer tools","collections","backend","nodejs","express"],
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",

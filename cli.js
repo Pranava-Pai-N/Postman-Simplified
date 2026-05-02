@@ -11,7 +11,7 @@ const program = new Command();
 program
   .name('postman-simplified')
   .description('CLI to transform captured API logs into Postman Collections')
-  .version('1.0.2');
+  .version('1.0.3');
 
 
 
