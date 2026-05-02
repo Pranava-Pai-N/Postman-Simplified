@@ -276,6 +276,27 @@ postman-simplified export ./path/to/api_history.json
 app.use(requestInterceptor({ filePath: './logs/my_history.json' }));
 ```
 
+## Project Structure
+```bash
+Backend to Postman Project
+├── .gitignore   # Files to be ignored by git
+
+├── .npmignore   # Files to be ignored by npm while publishing to npmjs
+
+├── cli.js       # Terminal based options code - Chalk, Commander
+
+├── index.js     # Entry Point
+├── LICENSE      # Project License
+├── package-lock.json
+├── package.json
+├── postman-mapper.js  # Converts to postman readable format
+
+├── Readme.md  # Project Readme
+├── requestInterceptor.js  # Middleware to be injected , handles the requests formatting to json
+
+└── server.js  # Sample usage
+```
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request.
